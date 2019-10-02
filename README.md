@@ -1,6 +1,6 @@
 # Prototype App
 
-####  Geliştirmemi istediğiniz projede kullanılan teknolojiler:
+####  Projede kullanılan teknolojiler:
 
 - Uygulama **SpringBoot** framework ile geliştirildi.
 - Dependency management için **Maven** kullanıldı.
