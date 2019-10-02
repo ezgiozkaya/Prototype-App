@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.ezgiozkaya/subscriber"
+	targetNamespace="http://www.ezgiozkaya/subscriber"
+	elementFormDefault="qualified">
+
+	<xs:element name="getSubscriberByIdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:long" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getSubscriberByIdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Subscriber" type="tns:Subscriber" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="getAllSubscribersRequest">
+		<xs:complexType />
+	</xs:element>
+
+	<xs:element name="getAllSubscribersResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Subscriber" type="tns:Subscriber"
+					maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Subscriber">
+		<xs:sequence>
+			<xs:element name="id" type="xs:long" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="msisdn" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="serviceStatus">
+		<xs:sequence>
+			<xs:element name="statusCode" type="xs:string" />
+			<xs:element name="message" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>
